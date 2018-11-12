@@ -25,16 +25,16 @@ showMessage("You can obtain the histogram for an image by pressing the 'H' key")
 run("Histogram"); // Runs the Histogram Command
 waitForUser("By Hovering the mouse over the histogram, you can read the\n value and count numbers for that histogram bin");
 
-waitForUser("The way an image is displayed can be modified \nusing Brightness And Contrast Adjustment\nunder \"Image>Adjust>Brightness/Contrast...\"\nor CTRL+SHIFT+D");
+waitForUser("The way an image is displayed can be modified \nusing Brightness And Contrast Adjustment\nunder \"Image>Adjust>Brightness/Contrast...\"\nor CTRL+SHIFT+C");
 
 run("Brightness/Contrast..."); // Displays Brightness and Contrast Window
-selectImage("gel.gif");
+selectImage(original);
 waitForUser("Press Live on the Histogram window");
-selectImage("gel.gif"); // Re-selects the image when adjusting brightness and contrast
+selectImage(original); // Re-selects the image when adjusting brightness and contrast
 waitForUser("Move the sliders of the B&C window.\nYou'll note the histogram does not change");
 
 waitForUser("The brightness and contrast can be adjusted in a macro as well.\nHere we set the min to 100 and max to 200.");
-selectImage("gel.gif");
+selectImage(original);
 setMinAndMax(100, 200);
 
 waitForUser("Be careful in hitting the \"Apply\" Button\nas this \"burns\" (rescales) the min and max of the image,\nchanging the data!");
@@ -48,7 +48,7 @@ waitForUser("We can capture the Histogram in a Macro as well. You can look at th
 // But you need to make sure that the original image is selected
 selectImage(original);
 
-// Now we can get the statistics. see https://imagej.nih.gov/ij/developer/macro/functions.html#getStatistics
+// Now we can get the statistics. see https://imagej.net/developer/macro/functions.html#getStatistics 
 getStatistics(area, mean, min, max, std, histogram);
 
 // Here it is now simple to access the i'th bin
@@ -59,5 +59,4 @@ bin = getNumber("Select a Bin number between 0 and 255", 34);
 showMessage("There are "+histogram[bin]+" pixels with value "+bin);
 
 // You can fine-tune the histogram by using the function getHistogram(values, counts, nBins[, histMin, histMax])
-// See https://imagej.nih.gov/ij/developer/macro/functions.html#getHistogram
-
+// See https: https://imagej.net/developer/macro/functions.html#getHistogram
