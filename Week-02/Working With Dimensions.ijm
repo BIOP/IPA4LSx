@@ -26,7 +26,7 @@ id = getImageID();
 
 // To get information on an image's dimensions
 getDimensions(width, height, channels, slices, frames);
-showMessage("This image has "+channels+" Channels, "+slices+" Slices and "+frames+ " Frames\nAnd is "+width+"x"+height+" pixels in size\nInspect the code to see how to get these numbers.");
+waitForUser("This image has "+channels+" Channels, "+slices+" Slices and "+frames+ " Frames\nAnd is "+width+"x"+height+" pixels in size\nInspect the code to see how to get these numbers.");
 
 
 waitForUser("Please Open the Macro Recorder, then click OK");
@@ -35,7 +35,7 @@ waitForUser("Move the sliders around, and note how nothing gets recorded");
 slice = getNumber("Choose a Slice between "+1+" and "+slices, 3);
 
 Stack.setSlice(slice);
-showMessage("We have selected slice number "+slice+" using a macro");
+waitForUser("We have selected slice number "+slice+" using a macro");
 
 
 // There are many methods to access different dimensions of the image. 
@@ -45,7 +45,7 @@ showMessage("We have selected slice number "+slice+" using a macro");
 Stack.setChannel(2);
 Stack.setFrame(10);
 Stack.setDisplayMode("color");
-showMessage("Here we moved to frame 10 and channel 2\nWe also set the image display to 'Color'");
+waitForUser("Here we moved to frame 10 and channel 2\nWe also set the image display to 'Color'");
 
 // Duplicating Images
 waitForUser("Duplicating images is one of the most important aspects when working in Fiji.\nWe can use 'Image>Duplicate...'. Feel free to try it out.");
@@ -58,7 +58,7 @@ frames = "11-31";
 selectImage(id);
 // We can duplicate subregions of hyperstacks easily
 run("Duplicate...", "title=[Subregion C"+channel+" Z"+slice+" T"+frames+" ] duplicate channels="+channel+" slices="+slice+" frames="+frames);
-showMessage("Here we duplicated frames "+frames+" of channel "+channel+" and slice "+slice);
+waitForUser("Here we duplicated frames "+frames+" of channel "+channel+" and slice "+slice);
 
 
 // We can duplicate ranges like this.
@@ -70,7 +70,7 @@ selectImage(id);
 
 // We can duplicate subregions of hyperstacks easily
 run("Duplicate...", "title=[Subregion C"+channel+" Z"+slices+" T"+frames+" ] duplicate channels="+channel+" slices="+slices+" frames="+frames);
-showMessage("Here we duplicated frames "+frames+" of channel "+channel+" and slices "+slices);
+waitForUser("Here we duplicated frames "+frames+" of channel "+channel+" and slices "+slices);
 
 // Show what happens of the image has a selection
 selectImage(id)
