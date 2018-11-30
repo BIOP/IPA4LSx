@@ -18,6 +18,7 @@ run("Close All");
 // and Clear the log window.
 print("\\Clear");
 
+waitForUser("This script/macro will open and process an image,\nwith dialog windows that will pause the workflow\nand allow you to check out the code.");
 // Let's open "blobs.gif" 
 run("Blobs (25K)");
 // and get its ID (so we can re-select this image when needed)
@@ -44,20 +45,20 @@ color = "Red";
 // and change the LUT to the 'color'.
 run(color);
 // a comment in a dialog window.
-waitForUser("Here, we've used the variable 'color' to change the LUT.\nLet's change the value  of the variabele if we change the value of the variable 'color'.");
+waitForUser("Here, we've used the variable 'color' to change the LUT.\nLet's change the value of the variable if we change the value of the variable 'color'.");
 
 // Here, we change the value of thevariable named 'color' equal to the string "Green"
 color = "Green";
 // and change the LUT to the 'color'.
 run(color);
 // a comment in a dialog window.
-waitForUser("Variables are not only strings, they can also be numbers.\nLet's add some value to the pixels");
+waitForUser("Variables are not only strings, they can also be numbers.\nLet's add some values to the pixels");
 
 // make sure to select the image and get the Histogram
 selectImage(blobs_id);
 run("Histogram");
 // a comment in a dialog window.
-waitForUser("To highligth the effect, we'll have a look to the histogram");
+waitForUser("To highligth the effect, we'll have a look at the histogram. This is the histogram of the original image.");
 
 // when using the histogram, we have to remove the extension from the image title
 // select the image
@@ -78,7 +79,8 @@ run("Add...", "value=20");
 rename(blobs_titleNoExt + "_add20");
 // before running the function Histogram
 run("Histogram");
-
+run("Tile");
+waitForUser("... and here the histogram of the original image after adding 20 to all the pixels ");
 
 // Here, is a new variable 'offset', with a defined value
 offset = -25
@@ -94,3 +96,4 @@ run("Histogram");
 
 // reorganize images on  screen
 run("Tile");
+waitForUser("... and finally the histogram after adding "+ offset +" to all the pixels.\nYou can now compare the histograms of the different images. ");
