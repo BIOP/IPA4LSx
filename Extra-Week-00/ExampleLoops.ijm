@@ -20,10 +20,10 @@ for (a=100;a>=10;a=a-10){
 }
 
 /* Also possible but obviously less elegant
-
-for (a=100;a>=10;a=a-1){
-	if (a%10==0) print("a="+a);	
-}
-
-Here we are using the modulo operator (character:%). It deleivers the remainder of a divison, e.g. 10%3=1 or 10%4=2
+ *
+ * for (a=100;a>=10;a=a-1){
+ * 	if (a%10==0) print("a="+a);	
+ *}
+ * Here we are using the modulo operator (character:%). It deleivers the remainder of a divison, e.g. 10%3=1 or 10%4=2
+ */ 
 
