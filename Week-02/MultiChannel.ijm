@@ -80,4 +80,5 @@ Stack.setChannel(1);
 run("Synchronize Windows");
 
 run("Tile");
-waitForUser("You can synchronize the Windows and go from one channel to another.\nYou might notice some changes in the images.");
+selectWindow("Synchronize Windows");
+waitForUser("Using the 'Synchronize the Windows', you can select the different images\n and go from one channel to another using the slider.\nYou might notice some changes in the images.");
