@@ -1,5 +1,5 @@
 /** 
- * lookup Tables
+ * Lookup Tables (LUTs)
  * ----------------------------------------------
  * 
  * This short macro showcases different way to use the Lookup Tables, the while loop, the window dialog getBoolean() 
