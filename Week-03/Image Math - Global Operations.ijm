@@ -42,6 +42,7 @@ for(i=0; i<operations.length; i++) {
 	
 	// Convert to 32-bit to perform proper image math
 	run("32-bit");
+	// Set the zoom to make the image a bit larger
 	run("In [+]");
 
 	// Running the actual mathematical operation

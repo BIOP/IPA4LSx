@@ -30,19 +30,20 @@ modifiedBy10	= downUpScale (ori_blobs_ID , 10)	;
 run("Tile");
 waitForUser("From the 'blobs' image we created 'degraded' versions by downscaling and upscaling without interpolation.");
 
-// make a stak from the different images
+// make a stack from the different images
 run("Images to Stack", "method=[Copy (top-left)] name=Stack title=[] use"); 
+waitForUser("The images are now re-arranged as a Stack.\nDue to downscaling and upscaling, the images have different widths and heights.\nThis is why the bottom and right edges have pixels at 0 in some slices");
 // as an alternative you can use method=[Copy (Center)].
-// due to downscaling and upscaling the images have different width and height
+// 
 // the results would then be different
 
-// here we make a line. by defining the point
+// here we make a line. by defining the start and end points
 makeLine(75, 100, 90, 130);
-waitForUser("The images are now re-arranged as a Stack.\nWe also made a line on the image, not let's plot it.")
+waitForUser("We also made a line on the image,\nand we will plot the intentities along that line.")
 
 // and here we ask for the plot.
 run("Plot Profile");
-waitForUser("In the 'Plot' window, click on 'Live'.\nNow, move in the stack using the slider to compare the profiles.\nYou can also move the line by selecting points");
+waitForUser("In the 'Plot' window, click on 'Live'.\nNow, move in the stack using the slider to compare the profiles.\nYou can also move or modify the line by click-dragging its anchor points");
 
 // To continue you can have a look to the CurveFittingDemo :  https://imagej.net/ij/macros/examples/CurveFittingDemo.txt
 // that makes use of Fit functions :  https://imagej.net/ij/developer/macro/functions.html#Fit
