@@ -30,7 +30,7 @@ waitForUser("This image has "+channels+" Channels, "+slices+" Slices and "+frame
 
 
 waitForUser("Please Open the Macro Recorder, then click OK");
-waitForUser("Move the sliders around, and note how nothing gets recorded");
+waitForUser("Move the sliders below the image, and note how nothing gets recorded");
 
 slice = getNumber("Choose a Slice between "+1+" and "+slices, 3);
 
@@ -75,9 +75,12 @@ waitForUser("Here we duplicated frames "+frames+" of channel "+channel+" and sli
 // Show what happens of the image has a selection
 selectImage(id)
 waitForUser("Note that if you have a selection on your image, duplicate will copy only that selection, as a rectangle...");
+
+// You will see ROIs in subsequent weeks. In the meantime look at 
+// https://imagej.net/ij/developer/macro/functions.html#makeOval
 makeOval(56, 56, 50, 50);
 run("Duplicate...", "title=[Duplicated stack with region] duplicate");
 
 run("Tile");
 
-waitForUser("Look at the different images and how they were obtained");
+waitForUser("Look at the different images and how they were obtained using the Macro Language");
