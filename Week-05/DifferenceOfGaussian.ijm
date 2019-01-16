@@ -1,8 +1,8 @@
 /** 
- *  Difference of Gaussian & Watershed
+ *  Difference of Gaussian 
  * ----------------------------------------------
  * 
- * This short macro showcases use of Difference of Gaussian combined with watershed 
+ * This short macro showcases use of Difference of Gaussian
  * 
  * Due to the simple nature of this code, no copyright is applicable
  * 
