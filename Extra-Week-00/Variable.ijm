@@ -18,7 +18,7 @@ run("Close All");
 // and Clear the log window.
 print("\\Clear");
 
-waitForUser("This script/macro will open and process an image,\nwith dialog windows that will pause the workflow\nand allow you to check out the code.");
+waitForUser("This script/macro will open and process an image,\nwith dialog windows that will pause the workflow\nand allow you to check the code.");
 // Let's open "blobs.gif" 
 run("Blobs (25K)");
 // and get its ID (so we can re-select this image when needed)
@@ -45,11 +45,11 @@ color = "Red";
 // and change the LUT to the 'color'.
 run(color);
 // a comment in a dialog window.
-waitForUser("Here, we've used the variable 'color' to change the LUT.\nLet's change the value of the variable if we change the value of the variable 'color'.");
+waitForUser("Here, we've used the variable 'color' to change the LUT.\nLet's now change the value of the variable named 'color'.");
 
-// Here, we change the value of thevariable named 'color' equal to the string "Green"
+// Here, by using the equal sign, we assign the String "Green" to the variable named 'color', 
 color = "Green";
-// and change the LUT to the 'color'.
+// and change the LUT using this 'color' variable.
 run(color);
 // a comment in a dialog window.
 waitForUser("Variables are not only strings, they can also be numbers.\nLet's add some values to the pixels");
@@ -58,19 +58,19 @@ waitForUser("Variables are not only strings, they can also be numbers.\nLet's ad
 selectImage(blobs_id);
 run("Histogram");
 // a comment in a dialog window.
-waitForUser("To highligth the effect, we'll have a look at the histogram. This is the histogram of the original image.");
+waitForUser("To vizualise the effect, please have a look at the image histogram. This is the histogram of the original image.");
 
 // when using the histogram, we have to remove the extension from the image title
 // select the image
 selectImage(blobs_id);
-// store it title in a variable
+// store its title in a variable
 blobs_title = getTitle();
 print("Original title : "+blobs_title);
 
 // and we remove the extension .gif from blobs_title
 // to do so we use the functions substring(str, startIndex,endIndex) and lengthOf(str)
 blobs_titleNoExt = substring(blobs_title, 0, (lengthOf(blobs_title)-4) ) 
-// normally we could use File.nameWithoutExtension but doesn't work here :(;
+// normally we could use File.nameWithoutExtension but it doesn't work here :(;
 print("Modified title : "+blobs_titleNoExt);
 
 // Here we add the value 20 to all the pixels
@@ -79,10 +79,11 @@ run("Add...", "value=20");
 rename(blobs_titleNoExt + "_add20");
 // before running the function Histogram
 run("Histogram");
+// displays all images as tiles on the screen
 run("Tile");
 waitForUser("... and here the histogram of the original image after adding 20 to all the pixels ");
 
-// Here, is a new variable 'offset', with a defined value
+// Here, is a new variable, named 'offset', with a defined value of -25
 offset = -25
 // we select the image
 selectImage(blobs_id);
