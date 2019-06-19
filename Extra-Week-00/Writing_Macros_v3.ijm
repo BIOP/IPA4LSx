@@ -2,7 +2,6 @@
  * Writing Macros
  * ----------------------------------------------
  * 
- * This short macro showcases different ways to use variable (string and number), arrays, for loop
  * 
  * Due to the simple nature of this code, no copyright is applicable
  * 
