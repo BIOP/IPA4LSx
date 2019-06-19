@@ -1,8 +1,7 @@
 /** 
  * Writing Macros
  * ----------------------------------------------
- * 
- * This short macro showcases different ways to use variable
+ *
  * 
  * Due to the simple nature of this code, no copyright is applicable
  * 
