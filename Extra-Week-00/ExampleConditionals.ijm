@@ -1,5 +1,5 @@
 /** 
- * Excercise Conditionals
+ * Exercise Conditionals
  * ----------------------------------------------
  * 
  * This short macro showcases the use of the conditional if/else statement
@@ -19,9 +19,9 @@ if (nImages==0){	//the function nImages returns the number of open images.
 		waitForUser("The file you selected is: "+toOpen);
 		open(toOpen);
 }
-//The conditional above asures that there is an image opened.
+//The conditional above ensures that there is an image opened.
 
-title=getTitle();		//retuens the title of he current image
+title=getTitle();		//returns the title of the current image
 
 if (endsWith(title,".jpg")){		//compare the end of the String title with the expression ".jpg"
 	showMessage("You opened an image with a lossy compression format");
