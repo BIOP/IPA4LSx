@@ -22,7 +22,7 @@ luts     = getList("LUTs"); //here we retrieve the list of LUT
 min_vals = newArray(0, 0, 0);
 max_vals = newArray(170, 130, 255);
 
-// change LUT and BC for rach channels
+// change LUT and BC for each channels
 for(i=0; i < imageChannels; i++) {
 	setLUTandBC(i+1 , luts[i+5] , min_vals[i] , max_vals[i] );
 }
