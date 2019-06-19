@@ -1,5 +1,5 @@
 /** 
- * Excercise Conditionals
+ * Exercise Loops
  * ----------------------------------------------
  * 
  * This short macro showcases the use of loops.
@@ -24,6 +24,6 @@ for (a=100;a>=10;a=a-10){
  * for (a=100;a>=10;a=a-1){
  * 	if (a%10==0) print("a="+a);	
  *}
- * Here we are using the modulo operator (character:%). It deleivers the remainder of a divison, e.g. 10%3=1 or 10%4=2
+ * Here we are using the modulo operator (character:%). It delivers the remainder of a divison, e.g. 10%3=1 or 10%4=2
  */ 
 
