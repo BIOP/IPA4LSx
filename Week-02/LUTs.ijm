@@ -48,7 +48,7 @@ while ( showNextLUT ) {
 		
 	} else {
 		// exit
-		showNextLUT = false
+		showNextLUT = false;
 	}
 }
 selectWindow("Log");
